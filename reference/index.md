@@ -170,7 +170,7 @@
 - [`bestMatch(`*`<SpatRaster>`*`,`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/bestMatch.md)
   [`bestMatch(`*`<SpatRaster>`*`,`*`<data.frame>`*`)`](https://rspatial.github.io/terra/reference/bestMatch.md)
   [`bestMatch(`*`<SpatRaster>`*`,`*`<matrix>`*`)`](https://rspatial.github.io/terra/reference/bestMatch.md)
-  : bestMatch
+  : Similarity between points and raster cells
 
 - [`boundaries(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/boundaries.md)
   : Detect boundaries (edges)
@@ -334,6 +334,7 @@
   [`nrow(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/dimensions.md)
   [`nlyr(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/dimensions.md)
   [`ncell(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/dimensions.md)
+  [`size(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/dimensions.md)
   [`nsrc(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/dimensions.md)
   [`` `ncol<-`( ``*`<SpatRaster>`*`,`*`<numeric>`*`)`](https://rspatial.github.io/terra/reference/dimensions.md)
   [`` `nrow<-`( ``*`<SpatRaster>`*`,`*`<numeric>`*`)`](https://rspatial.github.io/terra/reference/dimensions.md)
@@ -353,6 +354,11 @@
 - [`disagg(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/disaggregate.md)
   [`disagg(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/disaggregate.md)
   : Disaggregate raster cells or vector geometries
+
+- [`distValues(`*`<SpatRaster>`*`,`*`<matrix>`*`)`](https://rspatial.github.io/terra/reference/distValues.md)
+  [`distValues(`*`<SpatRaster>`*`,`*`<data.frame>`*`)`](https://rspatial.github.io/terra/reference/distValues.md)
+  [`distValues(`*`<SpatRaster>`*`,`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/distValues.md)
+  : Distance to reference values
 
 - [`distance(`*`<SpatRaster>`*`,`*`<missing>`*`)`](https://rspatial.github.io/terra/reference/distance.md)
   [`distance(`*`<SpatRaster>`*`,`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/distance.md)
@@ -474,6 +480,7 @@
   [`gdalCache()`](https://rspatial.github.io/terra/reference/gdal.md)
   [`setGDALconfig()`](https://rspatial.github.io/terra/reference/gdal.md)
   [`getGDALconfig()`](https://rspatial.github.io/terra/reference/gdal.md)
+  [`gdal_has_pam()`](https://rspatial.github.io/terra/reference/gdal.md)
   [`clearVSIcache()`](https://rspatial.github.io/terra/reference/gdal.md)
   [`libVersion()`](https://rspatial.github.io/terra/reference/gdal.md)
   [`unloadGDALdrivers()`](https://rspatial.github.io/terra/reference/gdal.md)
@@ -640,7 +647,7 @@
   : Add points, lines, or polygons to a map
 
 - [`make.RGB()`](https://rspatial.github.io/terra/reference/make.RGB.md)
-  : Create a RGB SpatRaster
+  : Create an RGB SpatRaster
 
 - [`makeTiles(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/makeTiles.md)
   [`getTileExtents(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/makeTiles.md)
@@ -701,6 +708,7 @@
   : Get or compute the minimum and maximum cell values
 
 - [`modal(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/modal.md)
+  [`modal(`*`<ANY>`*`)`](https://rspatial.github.io/terra/reference/modal.md)
   : modal value
 
 - [`mosaic(`*`<SpatRaster>`*`,`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/mosaic.md)
@@ -929,7 +937,7 @@
 - [`spatSample(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/sample.md)
   [`spatSample(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/sample.md)
   [`spatSample(`*`<SpatExtent>`*`)`](https://rspatial.github.io/terra/reference/sample.md)
-  : Take a regular sample
+  : Take a sample from a spatial object
 
 - [`sapp(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/sapp.md)
   [`sapp(`*`<SpatRasterDataset>`*`)`](https://rspatial.github.io/terra/reference/sapp.md)
@@ -1152,7 +1160,7 @@
 - [`union(`*`<SpatVector>`*`,`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/union.md)
   [`union(`*`<SpatVector>`*`,`*`<missing>`*`)`](https://rspatial.github.io/terra/reference/union.md)
   [`union(`*`<SpatExtent>`*`,`*`<SpatExtent>`*`)`](https://rspatial.github.io/terra/reference/union.md)
-  : Union SpatVector or SpatExtent objects
+  : Geometric union SpatVector or SpatExtent objects
 
 - [`unique(`*`<SpatRaster>`*`)`](https://rspatial.github.io/terra/reference/unique.md)
   [`unique(`*`<SpatVector>`*`)`](https://rspatial.github.io/terra/reference/unique.md)

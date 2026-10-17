@@ -227,7 +227,7 @@ Apart from the functions listed below, you can also use indexing with
 | [`as.data.frame`](https://rspatial.github.io/terra/reference/as.data.frame.md) | get cell values as a data.frame (including class labels) |
 | [`extract`](https://rspatial.github.io/terra/reference/extract.md) | Extract cell values from a SpatRaster (with cell numbers, coordinates, points, lines, or polygons) |
 | [`extractAlong`](https://rspatial.github.io/terra/reference/extractAlong.md) | Extract cell values along a line such that the values are in the right order |
-| [`spatSample`](https://rspatial.github.io/terra/reference/sample.md) | Take a sample (regular, random, stratified, weighted) sample from a SpatRaster |
+| [`spatSample`](https://rspatial.github.io/terra/reference/sample.md) | Take a sample (regular, random, stratified, weighted) from a SpatRaster |
 | [`minmax`](https://rspatial.github.io/terra/reference/minmax.md) | Get the minimum and maximum value of the cells of a SpatRaster (if known) |
 | [`setMinMax`](https://rspatial.github.io/terra/reference/minmax.md) | Compute the minimum and maximum value of a SpatRaster if these are not known |
 | ————————— | —————————————————————————————— |
@@ -758,10 +758,12 @@ longitude/latitude coordinates as if they were planar.
 
 ## **Comparison with the raster package**
 
-——————————————————————————————————————— "terra" was written to replace
-the "raster" package. "terra" has a very similar, but simpler,
-interface; it is faster, and it can do much more. This section
-highlights some of the differences between the two packages.
+———————————————————————————————————————
+
+"terra" was written to replace the "raster" package. "terra" has a very
+similar, but simpler, interface; it is faster, and it can do much more.
+This section highlights some of the differences between the two
+packages.
 
 ## XXXIII. New method names
 
@@ -769,7 +771,7 @@ highlights some of the differences between the two packages.
 (`RasterLayer, RasterStack, RasterBrick`). Likewise there is a single
 class for vector data `SpatVector` that replaces six `Spatial*` classes.
 Most method names are the same, but note the following important
-differences in methods names with the `raster` package
+differences in method names with the `raster` package
 
 |  |  |
 |----|----|
@@ -830,7 +832,7 @@ better. Here are some examples:
 |  | `raster` returns a list (for lines or polygons) or a matrix (for points, but without the ID |
 |  | column). You can use `list=TRUE` to get the results as a list |
 | [`values`](https://rspatial.github.io/terra/reference/values.md) | `terra` always returns a matrix. `raster` returns a vector for a `RasterLayer` |
-| [`Summary-methods`](https://rspatial.github.io/terra/reference/summarize-generics.md) | With `raster`, `mean(x, y)` and `mean(stack(x, y)` return the same result, a single |
+| [`Summary-methods`](https://rspatial.github.io/terra/reference/summarize-generics.md) | With `raster`, `mean(x, y)` and `mean(stack(x, y))` return the same result, a single |
 |  | layer with the mean of all cell values. This is also what `terra` returns with |
 |  | `mean(c(x, y))`, but with `mean(x, y)` the parallel mean is returned – that is, the |
 |  | computation is done layer-wise, and the number of layers in the output is the same as |
